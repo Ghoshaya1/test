@@ -4,4 +4,5 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello, World!"
+    df = pd.read_csv("/Sample/airtravel.csv")
+    return df.to_html()
